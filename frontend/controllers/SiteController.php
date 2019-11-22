@@ -67,6 +67,11 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionInstall()
+    {
+        return $this->render('index');
+    }
+
     /**
      * Displays homepage.
      *
