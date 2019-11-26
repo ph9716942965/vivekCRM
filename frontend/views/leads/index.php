@@ -3,6 +3,9 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use yii\helpers\ArrayHelper;
+use frontend\models\Disposition;
+use common\models\User;
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\LeadsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -27,9 +30,21 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'user_id',
-            'disposition_id',
+           // 'id',
+            // 'user.username',
+            [ 'format' => 'html', 
+            'label' => 'User',
+            'attribute'=>'user_id', 
+            'filter'=>ArrayHelper::map(User::find()->all(),'id','username'), //with custome sarch
+            'value'=>'user.username'
+            ],
+            // 'disposition.name',
+            [ 'format' => 'html', 
+            'label' => 'Disposition',
+            'attribute'=>'disposition_id', 
+            'filter'=>ArrayHelper::map(Disposition::find()->all(),'id','name'), //with custome sarch
+            'value'=>'disposition.name'
+            ],
             'name:ntext',
             'phone',
             //'email:ntext',

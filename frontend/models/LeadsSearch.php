@@ -40,7 +40,7 @@ class LeadsSearch extends Leads
      */
     public function search($params)
     {
-        $query = Leads::find();
+        $query = Leads::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 

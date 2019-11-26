@@ -41,7 +41,7 @@ class Disposition extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'name' => 'Disposition Name',
             'operation_rule' => 'Operation Rule',
         ];
     }
