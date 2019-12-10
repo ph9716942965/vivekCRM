@@ -15,33 +15,48 @@ use kartik\datetime\DateTimePicker;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <div class="row">
+    
+    <div class="col-md-6">
     <?= $form->field($model, 'user_id')->textInput() ?>
-
     <?= $form->field($model, 'disposition_id')->DropdownList(ArrayHelper::map(Disposition::find()->all(),'id','name'),['prompt'=>'Disposition']) ?>
+    
+    <?= $form->field($model, 'name')->textInput() ?>
 
-    <?= $form->field($model, 'name')->textarea(['rows' => 6]) ?>
+<?= $form->field($model, 'phone')->textInput() ?>
 
-    <?= $form->field($model, 'phone')->textInput() ?>
+<?= $form->field($model, 'email')->textInput() ?>
 
-    <?= $form->field($model, 'email')->textarea(['rows' => 6]) ?>
+<?= $form->field($model, 'problem')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'problem')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'next_calling_after')->widget(DateTimePicker::classname(), [
-	'options' => ['placeholder' => 'Enter Next Calling time ...'],
-	'pluginOptions' => [
-		'autoclose' => true
-	]
+<?= $form->field($model, 'next_calling_after')->widget(DateTimePicker::classname(), [
+'options' => ['placeholder' => 'Enter Next Calling time ...'],
+'pluginOptions' => [
+    'autoclose' => true
+]
 ]); ?>
 
-    <?= $form->field($model, 'address')->textarea(['rows' => 6]) ?>
+<?= $form->field($model, 'address')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'city')->textInput() ?>
+<?= $form->field($model, 'city')->textInput() ?>
 
-    <?= $form->field($model, 'state')->textInput() ?>
+<?= $form->field($model, 'state')->textInput() ?>
 
-    <?= $form->field($model, 'pincode')->textInput() ?>
+<?= $form->field($model, 'pincode')->textInput() ?>
 
+</div>
+
+
+    <div class="col-md-6">
+    
+</div>
+    </div>
+
+    
+   
+
+   
+   
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
