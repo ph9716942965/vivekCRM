@@ -58,7 +58,8 @@ use kartik\datetime\DateTimePicker;
    
    
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save and Close', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save and Next', ['class' => 'btn btn-success', 'name' => 'snxt', 'value' => 'yes']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

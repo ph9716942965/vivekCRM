@@ -3,21 +3,21 @@
                         \yiister\gentelella\widgets\Menu::widget(
                             [
                                 "items" => [
-                                    ["label" => "Dashboard", "url" => "/frontend/web/", "icon" => "home"],
+                                    ["label" => "Dashboard", "url" => "/crm/frontend/web/", "icon" => "home"],
                                     [
                                         "label" => "Master",
                                         "url" => "#",
                                         "icon" => "table",
                                         "items" => [
                                            // ["label" => "Users","url" => "/"],
-                                            ["label" => "Dashboard","url" => "/frontend/web/"],
-                                            ["label" => "New Leads","url" => "/frontend/web/index.php?r=leads"],
-                                            ["label" => "Allocate Leads","url" => "/frontend/web/index.php?r=disposition"],
+                                            ["label" => "Dashboard","url" => "/crm/frontend/web/"],
+                                            ["label" => "New Leads","url" => "/crm/frontend/web/index.php?r=leads"],
+                                            ["label" => "Allocate Leads","url" => "/crm/frontend/web/index.php?r=disposition"],
                                            // ["label" => "Agents","url" => "/"],
                                             ["label" => "Agents",
                                                 "url" => "#",
                                                 "items" => [
-                                                    ["label" => "Sing Up","url" => "/frontend/web/index.php?r=site/signup",],
+                                                    ["label" => "Sing Up","url" => "/crm/frontend/web/index.php?r=site/signup",],
                                                     ["label" => "Remove Agent","url" => "/",],
                                                 ],
                                             ],
